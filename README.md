@@ -3,7 +3,7 @@ Android library for getting a amazing animated SlashScreen into your Android app
 
 
 
-
+![20190410_210122](https://user-images.githubusercontent.com/48721096/55905578-f4d35700-5bda-11e9-933c-7d54f18ed19b.gif)
 
 
 
