@@ -35,7 +35,6 @@ public class Splashscreen extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splashscreen_layout);
-
         StartAnimations();
     }
 
@@ -48,9 +47,13 @@ public class Splashscreen extends AppCompatActivity {
 
         anim = AnimationUtils.loadAnimation(this, R.anim.translate);
         anim.reset();
-        ImageView iv = (ImageView) findViewById(R.id.splash);
-        iv.clearAnimation();
-        iv.startAnimation(anim);
+        ImageView splashImageIcon = (ImageView) findViewById(R.id.splash);
+        ImageView splashWordImageIcon = (ImageView) findViewById(R.id.splash);
+        // Initialize calling intent
+        final Intent intent = getIntent();
+        splashImageIcon.setImageResource(intent.getIntExtra(AriseSplashBuilder.SPLASH_ICON_ID, 0));
+        splashImageIcon.clearAnimation();
+        splashImageIcon.startAnimation(anim);
 
         splashTread = new Thread()
         {
@@ -61,13 +64,9 @@ public class Splashscreen extends AppCompatActivity {
                     int waited = 0;
                     // Splash screen pause time
                     while (waited < 600) {
-                        sleep(200);
+                        sleep(intent.getIntExtra(AriseSplashBuilder.SPLASH_DURATION, 1000) );
                         waited += 100;
                     }
-                   /* Intent intent = new Intent(Splashscreen.this,
-                            MainActivity.class);
-                    intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent);*/
                     Splashscreen.this.finish();
                 } catch (InterruptedException e) {
                     // do nothing

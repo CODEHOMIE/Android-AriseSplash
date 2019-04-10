@@ -8,9 +8,10 @@ public class AriseSplashBuilder {
     //Variables as objects
     private Activity activity;
     private Intent intent;
-    static final String SPLASH_ICON_ID = "";
-    static final String SPLASH_WORD_ICON_ID = "";
-    static final String TEXT_FADE_IN_DURATION = "";
+    static final String SPLASH_ICON_ID = "ImageID";
+    static final String SPLASH_WORD_ICON_ID = "WordImageID";
+    static final String SPLASH_DURATION = "SplashDuration";
+    static final String TEXT_FADE_IN_DURATION = "TextFadeInDuration";
     public static final int SPLASH_SCREEN_FINISHED = 10001;
 
     private AriseSplashBuilder(Activity activity) {
@@ -27,15 +28,16 @@ public class AriseSplashBuilder {
         return this;
     }
 
+    public AriseSplashBuilder setSplashDurationTime(int millis) {
+        intent.putExtra(SPLASH_DURATION, millis);
+        return this;
+    }
+
     public AriseSplashBuilder setWordImage(@NonNull int res_id) {
         intent.putExtra(SPLASH_WORD_ICON_ID, res_id);
         return this;
     }
 
-    public AriseSplashBuilder setTextFadeInDuration(@NonNull int millis) {
-        intent.putExtra(TEXT_FADE_IN_DURATION, millis);
-        return this;
-    }
 
     public void show() {
         if(!intent.hasExtra(AriseSplashBuilder.SPLASH_WORD_ICON_ID) || !intent.hasExtra(AriseSplashBuilder.SPLASH_ICON_ID)) throw new RuntimeException("You have to pass the wordIcon-id AND the image-id to open up the splash screen. Please use the methods setIconImage() and setWordImage().");
