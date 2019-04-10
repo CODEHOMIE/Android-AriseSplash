@@ -64,7 +64,7 @@ public class Splashscreen extends AppCompatActivity {
                         sleep(200);
                         waited += 100;
                     }
-                  /*  Intent intent = new Intent(Splashscreen.this,
+                   /* Intent intent = new Intent(Splashscreen.this,
                             MainActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);*/
