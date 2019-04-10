@@ -40,7 +40,7 @@ public class AriseSplashBuilder {
 
 
     public void show() {
-        if(!intent.hasExtra(AriseSplashBuilder.SPLASH_WORD_ICON_ID) || !intent.hasExtra(AriseSplashBuilder.SPLASH_ICON_ID)) throw new RuntimeException("You have to pass the wordIcon-id AND the image-id to open up the splash screen. Please use the methods setIconImage() and setWordImage().");
+        if(!intent.hasExtra(AriseSplashBuilder.SPLASH_ICON_ID)) throw new RuntimeException("You have to pass the the splash-image-id to open up the splash screen. Please use the methods setIconImage().");
         activity.startActivityForResult(intent, SPLASH_SCREEN_FINISHED);
     }
 }

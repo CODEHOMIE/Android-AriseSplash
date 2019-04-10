@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
         AriseSplashBuilder.getInstance(this)
                 .setIconImage(R.drawable.logo)
+                .setWordImage(R.drawable.word_logo)
                 .setSplashDurationTime(1000)
                 .show();
     }
