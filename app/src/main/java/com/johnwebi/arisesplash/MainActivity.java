@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
         AriseSplashBuilder.getInstance(this)
                 .setIconImage(R.drawable.logo)
-                .setWordImage(R.drawable.word_logo)
+               // .setWordImage(R.drawable.word_logo)
                 .setSplashDurationTime(1000)
                 .show();
     }
@@ -25,7 +25,6 @@ public class MainActivity extends AppCompatActivity {
             if(resultCode == RESULT_OK) {
                 Toast.makeText(this, "SplashScreen finished", Toast.LENGTH_SHORT).show();
             } else if(resultCode == RESULT_CANCELED) {
-                Toast.makeText(this, "SplashScreen finished, but canceled", Toast.LENGTH_SHORT).show();
             }
         }
     }

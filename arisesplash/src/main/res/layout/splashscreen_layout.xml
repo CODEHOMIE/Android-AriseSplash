@@ -9,6 +9,8 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:background="@color/white"
         android:orientation="vertical">
 
         <ImageView
@@ -16,16 +18,17 @@
             android:layout_height="130dp"
             android:layout_above="@+id/word_logo"
             android:id="@+id/splash"
-            android:layout_margin="25dp"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
             android:src="@drawable/icon_logo"/>
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:id="@+id/word_logo"
             android:layout_centerInParent="true"
             android:src="@drawable/word_logo"/>
-
     </RelativeLayout>
 
 </LinearLayout>
