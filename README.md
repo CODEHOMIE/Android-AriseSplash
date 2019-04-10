@@ -48,7 +48,7 @@ Thank you for using the SplashScreen!
 
 © 2019-2020 (Designed and developed by John Webi)
 
-# By me coffee:
+# Buy me coffee:
     Twitter: https://twitter.com/johnswebi
     Email: johnwebi@icloud.com
     Phone: +254796190644
