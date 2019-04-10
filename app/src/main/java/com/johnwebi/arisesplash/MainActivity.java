@@ -10,9 +10,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        AriseSplashBuilder.getInstance(this)
+       /* AriseSplashBuilder.getInstance(this)
                 .setImage(R.drawable.app_icon)
                 .skipImage(true)
-                .show();
+                .show();*/
     }
 }
