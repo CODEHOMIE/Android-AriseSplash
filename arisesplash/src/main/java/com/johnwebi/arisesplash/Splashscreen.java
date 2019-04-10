@@ -45,13 +45,14 @@ public class Splashscreen extends AppCompatActivity {
         l.clearAnimation();
         l.startAnimation(anim);
 
+        final Intent intent = getIntent();
         anim = AnimationUtils.loadAnimation(this, R.anim.translate);
         anim.reset();
         ImageView splashImageIcon = (ImageView) findViewById(R.id.splash);
-        ImageView splashWordImageIcon = (ImageView) findViewById(R.id.splash);
+        ImageView splashWordImageIcon = (ImageView) findViewById(R.id.word_logo);
         // Initialize calling intent
-        final Intent intent = getIntent();
         splashImageIcon.setImageResource(intent.getIntExtra(AriseSplashBuilder.SPLASH_ICON_ID, 0));
+        splashWordImageIcon.setImageResource(intent.getIntExtra(AriseSplashBuilder.SPLASH_WORD_ICON_ID, 0));
         splashImageIcon.clearAnimation();
         splashImageIcon.startAnimation(anim);
 
